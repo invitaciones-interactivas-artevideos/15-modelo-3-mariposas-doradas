@@ -639,8 +639,11 @@ margin-left: -28.125vh;
     </div>
   </section>
 
-  <section id="info">
-    <div class="box">
+  
+<section id="info">
+
+<!-- 1. CUENTA REGRESIVA -->
+<div class="box">
       <h2>Faltan...</h2>
       <div class="countdown">
         <div class="time"><span id="d">0</span><small>Días</small></div>
@@ -648,9 +651,9 @@ margin-left: -28.125vh;
         <div class="time"><span id="m">0</span><small>Min</small></div>
         <div class="time"><span id="s">0</span><small>Seg</small></div>
       </div>
-    </div>
 
-    <div class="box detalle-evento">
+<!-- 2. FECHA Y LUGAR -->
+<div class="box detalle-evento">
       <h2><i class="fa-regular fa-calendar animated-icon"></i> Fecha y lugar</h2>
       <p id="dateText"></p>
       <p id="timeText"></p>
@@ -658,24 +661,29 @@ margin-left: -28.125vh;
       <p id="addressText"></p>
     </div>
 
-    <div class="box">
+<!-- 3. MIRA COMO LLEGAR -->
+<div class="box">
       <h2><i class="fa-solid fa-location-dot animated-icon"></i> Mira cómo llegar</h2>
       <a id="mapLink" class="button" href="#" target="_blank" rel="noopener">Ver mapa</a>
     </div>
 
-    <div class="box">
+<!-- 4. DRESS CODE -->
+<div class="box">
+      <h2><i class="fa-solid fa-wand-magic-sparkles animated-icon"></i> Dress code</h2>
+      <p id="dressCodeText"></p>
+    </div>
+
+<!-- 5. CARRETE DE FOTOS -->
+<div class="box">
       <h2><i class="fa-regular fa-image animated-icon"></i> Mis recuerdos</h2>
       <div class="carousel" aria-label="Carrete de fotos">
         <button class="carousel-btn prev" type="button" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left"></i></button>
         <div class="carousel-viewport">
           <div id="carouselTrack" class="carousel-track"></div>
         </div>
-        <button class="carousel-btn next" type="button" aria-label="Foto siguiente"><i class="fa-solid fa-chevron-right"></i></button>
-        <div id="carouselDots" class="carousel-dots" aria-hidden="true"></div>
-      </div>
-    </div>
 
-    <div class="box">
+<!-- 6. CONFIRMACION -->
+<div class="box">
       <h2 class="icon-heading" aria-label="Confirmación de asistencia"><i class="fa-regular fa-heart animated-icon"></i></h2>
       <p class="box-texto">
         Tu presencia<br> 
@@ -686,12 +694,19 @@ margin-left: -28.125vh;
       <a id="confirmLink" class="button" href="#" target="_blank" rel="noopener">Confirmar asistencia</a>
     </div>
 
-    <div class="box">
-      <h2><i class="fa-solid fa-wand-magic-sparkles animated-icon"></i> Dress code</h2>
-      <p id="dressCodeText"></p>
+<!-- 7. PLAYLIST -->
+<div id="playlistModule" class="box modulo-opcional">
+      <h2><i class="fa-solid fa-record-vinyl animated-icon"></i> ¡Playlist!</h2>
+      <p class="box-texto">
+        ¡Ayudame sugiriendo<br>
+        las canciones que pensás<br>
+        que no pueden faltar en la fiesta!
+      </p>
+      <a id="playlistLink" class="button" href="#" target="_blank" rel="noopener">Playlist</a>
     </div>
 
-    <div id="giftModule" class="box modulo-opcional">
+<!-- 8. REGALO -->
+<div id="giftModule" class="box modulo-opcional">
       <h2><i class="fa-solid fa-gift animated-icon"></i> Regalo</h2>
       <p class="box-texto">
         El mejor regalo es que vengas,<br>
@@ -712,26 +727,16 @@ margin-left: -28.125vh;
           <button class="btn copy-btn" type="button" onclick="copiarDato(CONFIG.regalo.cuenta)">Copiar cuenta</button>
         </div>
       </div>
-    </div>
 
-    <div id="playlistModule" class="box modulo-opcional">
-      <h2><i class="fa-solid fa-record-vinyl animated-icon"></i> ¡Playlist!</h2>
-      <p class="box-texto">
-        ¡Ayudame sugiriendo<br>
-        las canciones que pensás<br>
-        que no pueden faltar en la fiesta!
-      </p>
-      <a id="playlistLink" class="button" href="#" target="_blank" rel="noopener">Playlist</a>
-    </div>
-
-    <div class="box">
+<div class="box">
       <div class="frase-final">
         Te espero para compartir<br>
         este momento tan especial...<br>
         Será una noche para recordar siempre!
       </div>
     </div>
-  </section>
+
+</section>
 </main>
 
 <script>
@@ -1544,4 +1549,3 @@ window.addEventListener("load", iniciarCarrusel);
 
 </body>
 </html>
-
