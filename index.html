@@ -166,7 +166,10 @@ body {
   gap: 12px;
   margin-top: 30px;
 }
-
+.btn-musica{
+  margin-left: 80px;
+  margin-top: 8px;
+             }
 .btn,
 a.button {
   font-family: var(--body-font);
@@ -633,8 +636,9 @@ margin-left: -28.125vh;
       </div>
 
       <div class="acciones">
-        <button class="btn" type="button" onclick="scrollToInfo()">Ver invitación</button>
-        <button class="btn" type="button" onclick="toggleMusic()"><i class="fa-solid fa-music"></i> Música</button>
+      <div class="acciones">
+  <button class="btn" type="button" onclick="scrollToInfo()">Ver invitación</button>
+  <button class="btn btn-musica" type="button" onclick="toggleMusic()"><i class="fa-solid fa-music"></i> Música</button>
       </div>
 
       <audio id="music" preload="auto">
