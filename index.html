@@ -822,9 +822,7 @@ const CONFIG = {
   direccion: "Avenida Las Flores 2020",
   mapa: "https://maps.app.goo.gl/cKfbAR5rutndHhUD8",
   dressCode: "Semi-formal",
-  whatsapp: "59895090806",
-  mensajeWhatsApp: "Hola, quiero confirmar mi asistencia al cumpleaños de Julieta",
-  playlistLink: "https://docs.google.com/forms/d/e/1FAIpQLScqPkvgqVB4HsSz1baU1HlrFILnP-eSKfCqbBZtX4Gk-JCsWA/viewform?usp=sharing&ouid=116004140157480559476",
+  formularioAsistencia: "https://docs.google.com/forms/d/e/1FAIpQLScZhjYcfePL1Ylu4gyruySPntMRvHBywHx09yzgDPboeVvNSQ/viewform?usp=sharing&ouid=108226770807790576500",
   mensajePlaylistWhatsApp: "Hola, quiero sugerir una canción para la fiesta: ",
   regalo: {
     titular: "Nombre Apellido",
@@ -1373,8 +1371,7 @@ function cargarDatos() {
   document.getElementById("mapLink").href = CONFIG.mapa;
   document.getElementById("dressCodeText").innerText = CONFIG.dressCode;
 
-  const texto = encodeURIComponent(CONFIG.mensajeWhatsApp);
-  document.getElementById("confirmLink").href = `https://wa.me/${CONFIG.whatsapp}?text=${texto}`;
+  document.getElementById("confirmLink").href = CONFIG.formularioAsistencia;
 }
 
 function configurarExtras() {
