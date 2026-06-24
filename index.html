@@ -1391,7 +1391,7 @@ function cargarDatos() {
   document.getElementById("venueText").innerText = CONFIG.salon;
   document.getElementById("addressText").innerText = CONFIG.direccion;
   document.getElementById("mapLink").href = CONFIG.mapa;
-  document.getElementById("dressCodeText").innerText = CONFIG.dressCode;
+document.getElementById("dressCodeText").innerHTML = CONFIG.dressCode;
 
   document.getElementById("confirmLink").href = CONFIG.formularioAsistencia;
 }
