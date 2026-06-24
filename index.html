@@ -703,7 +703,21 @@ margin-left: -28.125vh;
       <a id="confirmLink" class="button" href="#" target="_blank" rel="noopener">Confirmar asistencia</a>
     </div>
 
-   <div id="playlistModule" class="box modulo-opcional">
+   <div id="playlistModule" class="box modulo-opcional"><div id="albumFotosModule" class="box modulo-opcional">
+  <h2>
+    <i class="fa-solid fa-camera animated-icon"></i>
+    Álbum de fotos de la fiesta
+  </h2>
+
+  <p class="box-texto">
+    Compartí acá las fotos más lindas que sacaste de la fiesta
+    y mirá las que ya tenemos.
+  </p>
+
+  <a id="albumFotosLink" class="button" href="#" target="_blank" rel="noopener">
+    Subir fotos
+  </a>
+</div>
       <h2><i class="fa-solid fa-record-vinyl animated-icon"></i> ¡Playlist!</h2>
       <p class="box-texto">
         ¡Ayudame sugiriendo<br>
@@ -812,8 +826,9 @@ const CONFIG = {
     sombra: ""
   },
 
-  mostrarRegalo: true,
-  mostrarPlaylist: true,
+ mostrarRegalo: true,
+mostrarPlaylist: true,
+mostrarAlbumFotos: true,
   nombre: "Julieta",
   fechaEvento: "2026-10-17T20:00:00",
   fechaTexto: "El sábado 17 de octubre",
@@ -823,6 +838,7 @@ const CONFIG = {
   mapa: "https://maps.app.goo.gl/cKfbAR5rutndHhUD8",
   dressCode: "Semi-formal",
   formularioAsistencia: "https://docs.google.com/forms/d/e/1FAIpQLScZhjYcfePL1Ylu4gyruySPntMRvHBywHx09yzgDPboeVvNSQ/viewform?usp=sharing&ouid=108226770807790576500",
+  albumFotosLink: "PEGAR_AQUI_LINK_DRIVE",
   mensajePlaylistWhatsApp: "Hola, quiero sugerir una canción para la fiesta: ",
   regalo: {
     titular: "Nombre Apellido",
@@ -1377,9 +1393,11 @@ function cargarDatos() {
 function configurarExtras() {
   const giftModule = document.getElementById("giftModule");
   const playlistModule = document.getElementById("playlistModule");
+  const albumFotosModule = document.getElementById("albumFotosModule");
 
   giftModule.hidden = !CONFIG.mostrarRegalo;
-  playlistModule.hidden = !CONFIG.mostrarPlaylist;
+playlistModule.hidden = !CONFIG.mostrarPlaylist;
+albumFotosModule.hidden = !CONFIG.mostrarAlbumFotos;
 
   if (CONFIG.mostrarRegalo) {
     document.getElementById("giftTitular").innerText = CONFIG.regalo.titular;
@@ -1394,6 +1412,8 @@ function configurarExtras() {
     const sugerencia = encodeURIComponent(CONFIG.mensajePlaylistWhatsApp);
     playlistLink.href = CONFIG.playlistLink || `https://wa.me/${CONFIG.whatsapp}?text=${sugerencia}`;
   }
+  if (CONFIG.mostrarAlbumFotos) {
+  document.getElementById("albumFotosLink").href = CONFIG.albumFotosLink;
 }
 
 function actualizarCuentaRegresiva() {
