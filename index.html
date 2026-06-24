@@ -711,6 +711,14 @@ margin-left: -28.125vh;
 
   <p class="box-texto">
     Compartí acá las fotos más lindas que sacaste de la fiesta
+    <div id="albumFotosModule" class="box modulo-opcional">
+  <h2>
+    <i class="fa-solid fa-camera animated-icon"></i>
+    Álbum de fotos de la fiesta
+  </h2>
+
+  <p class="box-texto">
+    Compartí acá las fotos más lindas que sacaste de la fiesta
     y mirá las que ya tenemos.
   </p>
 
@@ -718,14 +726,20 @@ margin-left: -28.125vh;
     Subir fotos
   </a>
 </div>
-      <h2><i class="fa-solid fa-record-vinyl animated-icon"></i> ¡Playlist!</h2>
-      <p class="box-texto">
-        ¡Ayudame sugiriendo<br>
-        las canciones que pensás<br>
-        que no pueden faltar en la fiesta!
-      </p>
-      <a id="playlistLink" class="button" href="#" target="_blank" rel="noopener">Playlist</a>
-    </div>
+
+<div id="playlistModule" class="box modulo-opcional">
+  <h2><i class="fa-solid fa-record-vinyl animated-icon"></i> ¡Playlist!</h2>
+
+  <p class="box-texto">
+    ¡Ayudame sugiriendo<br>
+    las canciones que pensás<br>
+    que no pueden faltar en la fiesta!
+  </p>
+
+  <a id="playlistLink" class="button" href="#" target="_blank" rel="noopener">
+    Playlist
+  </a>
+</div>
 
     <div id="giftModule" class="box modulo-opcional">
       <h2><i class="fa-solid fa-gift animated-icon"></i> Regalo</h2>
@@ -1415,6 +1429,7 @@ albumFotosModule.hidden = !CONFIG.mostrarAlbumFotos;
   if (CONFIG.mostrarAlbumFotos) {
   document.getElementById("albumFotosLink").href = CONFIG.albumFotosLink;
 }
+  }
 
 function actualizarCuentaRegresiva() {
   const now = Date.now();
