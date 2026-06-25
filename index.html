@@ -36,6 +36,7 @@
   --color-overlay-centro: rgba(0, 0, 0, 0.16);
   --sombra: rgba(0, 0, 0, 0.28);
   --title-font: 'Great Vibes', cursive;
+  --interlineado-box: 1.9;
   --body-font: 'Cormorant Garamond', serif;
 }
 
@@ -250,6 +251,8 @@ margin-left: -28.125vh;
   align-items: center;
   justify-content: center;
   text-align: center;
+  line-height: var(--interlineado-box);
+}
 }
 
 .box h2 {
@@ -276,7 +279,19 @@ margin-left: -28.125vh;
 
 .box p {
   font-size: 1.2rem; //tamaño de la letra de los textos de los boxes
-  line-height: 2.3;
+  .box p {
+    font-size: 1.2rem;
+    line-height: var(--interlineado-box);
+    color: var(--color-texto-box);
+}
+
+.detalle-evento p {
+    line-height: var(--interlineado-box);
+}
+
+.box-texto {
+    line-height: var(--interlineado-box);
+}
   color: var(--color-texto-box);
 }
 
