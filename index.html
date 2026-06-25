@@ -38,6 +38,8 @@
   --title-font: 'Great Vibes', cursive;
   --interlineado-box: 1.9;
   --body-font: 'Cormorant Garamond', serif;
+  --interlineado-box: 2.3;
+--interlineado-frases: 1.55;
 }
 
 * {
@@ -277,27 +279,24 @@ margin-left: -28.125vh;
   font-size: clamp(1.8rem, 5vw, 2.3rem);
 }
 
-.box p {
-  font-size: 1.2rem; //tamaño de la letra de los textos de los boxes
-  .box p {
-    font-size: 1.2rem;
-    line-height: var(--interlineado-box);
-    color: var(--color-texto-box);
-}
-
+.box p,
+.box-texto,
 .detalle-evento p {
-    line-height: var(--interlineado-box);
-}
-
-.box-texto {
-    line-height: var(--interlineado-box);
-}
+  font-size: 1.2rem;
+  line-height: var(--interlineado-box);
   color: var(--color-texto-box);
 }
 
-.detalle-evento p {
-  line-height: 2.3;
+.box-texto {
+  max-width: 650px;
+  margin-bottom: 20px;
 }
+
+.frase-final {
+  margin: 0 0 20px;
+  line-height: var(--interlineado-frases); /* o 1.55 */
+}
+
 
 .countdown {
   display: grid;
